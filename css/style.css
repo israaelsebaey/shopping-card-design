@@ -1,0 +1,380 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    perspective: 700px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: -webkit-linear-gradient(left,#cae0fd,#cbbad2);
+}
+.header{
+    width: 100%;
+    height: 70px;
+    background-color: #f8f9fa;
+    padding: 2px 0;
+    line-height: 70px;
+    box-shadow: 5px 5px 10px rgba(204, 204, 204, 0.697);
+}
+.header .container{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: auto;
+}
+.header .logo{
+    color: #aa869d;;
+    float: left;
+    width: 50%;
+}
+.header .icon{
+    float: right; 
+    padding: 0 10px;
+    position: relative;
+    width: 30px;
+
+}
+.header .icon i{
+    font-size: 20px;
+    color: #aa869d;;  
+}
+.header .cart{
+    color: #aa869d;;
+    box-shadow: 2px 2px 5px #d38fba77,-2px -2px 5px #d38fba76;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    transition: 1s;
+    background-color: #fff;   
+}
+.header .cart span{
+    position: absolute;
+    top: -25px;
+    left: 7px;
+    font-size: 12px;
+    font-weight: bold;  
+}
+.header .cart:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+/* ================================================= */
+.title h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 70px;
+    color:  #fff;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000;
+    text-shadow: 1px 1px 1px rgba(16, 16, 16, 0.232),
+    1px 2px 1px rgba(16, 16, 16, 0.232),
+    1px 2px 1px rgba(16, 16, 16, 0.232),
+    1px 3px 1px rgba(16, 16, 16, 0.232),
+    1px 3px 1px rgba(16, 16, 16, 0.232),
+    1px 4px 1px #fb91c118,
+    1px 4px 1px #fb91c118,
+    1px 5px 1px #fb91c118,
+    1px 5px 1px #fb91c118,
+    1px 6px 1px #fb91c118,
+    1px 6px 6px #fb91c118,
+    1px 7px 10px #fb91c118,
+    1px 7px 35px #fb91c118,
+    1px 8px 60px #fb91c118;  
+}
+.title .underline{
+    width: 120px;
+    height: 2px;
+    margin:20px auto;
+    background-color: #aa869d;
+}
+/* ===================transform design============================== */
+.cards{
+    width: 80%;
+    margin: 80px auto;
+    padding: 0 50px;
+    /* border: 1px solid #fff; */
+    height: 420px;
+    transform-style: preserve-3d;
+}
+.cards .item,
+.cards .front,
+.cards .back
+{
+    width: 295px;
+    height: 400px;
+    /* padding: 10px; */
+}
+.cards .item{
+    position: relative;
+    transition: 1s;
+    transform-style: preserve-3d;
+    display: inline-block;
+    /* box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.43); */
+}
+.cards .back,
+.cards .front{
+    position: absolute;
+    border-radius: 20px;
+    /* padding: 10px; */
+}
+.cards .front{
+    backface-visibility: hidden;
+    z-index: 1;
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+.cards .back{
+    transform: rotateY(180deg);
+    background-color: #fff;
+}
+.cards .item:hover{
+    transform: rotateY(180deg);
+}
+.cards .item2{
+    margin: 0 130px;
+}
+/* ==================front style================================ */
+.cards{
+    overflow: hidden;  
+}
+.cards .front{
+    overflow: hidden;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 2px  rgba(220, 20, 60, 0.149);
+}
+.cards .circle{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 22px;
+    box-shadow: 2px 2px 60px 5px rgba(220, 20, 60, 0.426);
+    background: -webkit-radial-gradient(50% 80%,circle,#eb7fc4,#d3b5c8);
+}
+.cards .front img{
+    width: 200px;
+    position: absolute;
+    top: 5px;
+    left: 45px;
+}
+.cards .front .info{
+    position: absolute;
+    top: 260px;
+    left: 30px;
+}
+.cards .front .info h2{
+    color: rgb(66, 66, 66);
+    font-size: 20px;
+}
+.cards .front .info p,
+.cards .back  .info p
+{
+    color: rgb(124, 124, 124);
+    font-size: 14px;
+    margin-top: 10px;
+}
+.cards .front .icon{
+    margin-top: 10px;
+}
+.cards .front .icon i{
+    color: #fbd902;
+    font-size: 14px;
+}
+.cards .front .icon span{
+    color: rgb(124, 124, 124);
+    font-size: 14px;
+    margin-left: 5px;
+}
+.cards .front .fa-heart{
+    font-size: 20px;
+    color: #aa869d;
+    display: block;
+    margin-top: 10px;
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+    transition: 1s;
+}
+/* ==============back style=================== */
+.cards .item .back{
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    transition: 1s;
+    background-color: #d38fba;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.cards .item1 .back{
+    background-image: url('../images/h3.png') ;
+}
+.cards .item2 .back{
+    background-image: url('../images/p1.png');
+}
+.cards .item3 .back{
+    background-image: url('../images/c1.png');
+}
+.cards .item .back::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.792);
+    z-index: -1;
+    transition: 1s;
+    
+}
+.cards .item .back:hover::after{
+    /* height: 100%; */
+    width: 100%;
+    border-radius: 20px;
+}
+.cards .item .back .info{
+    text-align: left;
+    margin-top: 90px;
+    margin-left: 30px;
+    transition-delay: 2s;   
+}
+.cards .item .back .colors{
+    margin-top: 20px;
+}
+.cards .item .back .colors span{
+    color: rgba(255, 255, 255, 0.79);
+}
+.cards .item .back .colors i{
+    transition: 1s;
+}
+.cards .item .back .colors i:hover{
+    cursor: pointer;
+    margin:0 5px;
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+.cards .item .back .price{
+    margin-top: 20px;
+}
+.cards .item .back .price span{
+    margin-right: 14px;
+}
+.cards .item .back .price strong{
+    margin-left: 8px;
+}
+.cards .item .back .info a{
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.79);
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.79);;
+    text-align: center;
+    transition: 0.5s;
+    transform: translateY(220px);
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.242),-2px -2px 10px rgba(255, 255, 255, 0.204);
+    position: relative;
+}
+.cards .item .back .info a:hover{
+    box-shadow: 2px 2px 20px  rgba(255, 255, 255, 0.242) inset,-2px -2px 20px  rgba(255, 255, 255, 0.204) inset;
+    color: #e5989b;;
+    transition-delay: 0;
+}
+.cards .item .back .info h2,
+.cards .back  .info p,
+.cards .back  .info .colors
+{
+    color: #fff;
+    transform: translateY(-270px);
+    transition: 1s;
+    transition-delay: 0.2s;
+}
+.cards .back  .info p{
+    transition-delay: 0.4s;
+    color: rgba(255, 255, 255, 0.79);
+    margin-top: 20px;
+}
+.cards .back  .info .colors{
+    transition-delay: 0.6s;
+}
+.cards .item .back .price{
+    transition-delay: 0.8s;
+}
+.cards .item .back:hover  a{
+    transition-delay: 0.5s;
+}
+.cards .item .back:hover h2{
+    transform: translateY(0);
+}
+.cards .item .back:hover p{
+    transform: translateY(0);
+}
+.cards .item .back:hover .colors{
+    transform: translateY(0);
+}
+.cards .item .back:hover  a{
+    transform: translateY(0);
+}
+/* ====================water style======================= */
+.water .drop{
+    position: absolute;
+    box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
+    25px 35px 20px rgba(0,0,0,0.05),
+    25px 30px 30px rgba(0,0,0,0.05),
+    inset -20px -20px 25px rgba(255,255,255,0.9);
+    transition: 0.3s ease-in-out;  
+}
+.water .drop:nth-child(1){
+    border-radius: 38% 62% 48% 52% / 52% 39% 61% 48% ;
+    width: 60px;
+    height: 60px;
+    top: 85px;
+    left: 600px;
+    /* z-index: -1; */
+}
+.water .drop:nth-child(2){
+    border-radius: 38% 62% 48% 52% / 52% 39% 61% 48% ;
+    width: 70px;
+    height: 70px;
+    top: 120px;
+    left: 800px;
+    z-index: -1;
+}
+.water .drop:nth-child(3){
+    border-radius: 38% 62% 48% 52% / 52% 39% 61% 48% ;
+    width: 100px;
+    height: 100px;
+    top: 200px;
+    left: 1280px;
+}
+.water .drop:nth-child(4){
+    border-radius: 48% 52% 41% 59% / 47% 40% 60% 53% ;   ;
+    width: 50px;
+    height: 50px;
+    top: 160px;
+    left: 1360px;
+}
+.water .drop:nth-child(5){
+    border-radius: 48% 52% 41% 59% / 47% 40% 60% 53% ;   ;
+    width: 70px;
+    height: 70px;
+    top: 45px;
+    left: 100px;
+}
+
+.water .drop:hover{
+    border-radius: 50%;
+}
+
+
+
+
+
+
